@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Mono:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: rgb(37, 9, 37);
+    height: 65px;
+    color: white;
+    font-size: 27px;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;   
+}
+.container{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.ul-nav {
+    margin: 0px;
+}
+.line {
+    height: 3px;
+    width: 0px;
+}
+
+#reset {
+    margin: 0px 23px;
+    padding: 1px 18px;
+    background-color: #f3e7f9;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.game-div {
+    margin-top: 50px;
+}
+
+.info {
+    font-size: 22px;
+    font-family: "Inter", sans-serif;
+}
+.box{
+    border: 2px solid black;
+    height: 20vh ;
+    font-size: 5vw;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: rgb(222, 200, 243);
+}
+.excited img {
+    display: none;
+}
+.left-side{
+    margin-bottom: 60pxpx;
+}
+.right-side{
+    margin-bottom: 60pxpx;
+}
+#reset{
+    transition: 0.3s ease-in-out;
+
+}
+#reset:hover{
+    background-color: rgb(222, 200, 243);
+
+}

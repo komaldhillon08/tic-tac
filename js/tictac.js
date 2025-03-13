@@ -15,17 +15,17 @@ const changeturn = () => {
 
 const checkwin = () => {
     //  music.play();
-    let boxtext = document.querySelectorAll(".boxtext");
+    let boxtext = document.getElementsByClassName("boxtext");
 
     let wins = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
+        [0, 1, 2, 1, 3.3, 0],
+        [3, 4, 5, 1, 10.1, 0],
+        [6, 7, 8, 1, 17, 0],
+        [0, 3, 6, -11.7, 11, 90],
+        [1, 4, 7, -0.6, 11, 90],
+        [2, 5, 8, 10.5, 11.1, 90],
+        [0, 4, 8, -0.5, 10.3, 32],
+        [2, 4, 6, -0.5, 10.1, 148]
     ]
 
     wins.forEach(e => {
@@ -34,22 +34,14 @@ const checkwin = () => {
             (boxtext[e[0]].innerText !== "")) {
             document.querySelector(".info").innerText = boxtext[e[0]].innerText + " won";
             isgameover = true;
+            document.querySelector(".excited").getElementsByTagName('img')[0].style.width = "200px"
 
-            let excitedElements = document.getElementsByClassName("excited");
-
-            // Loop through each element with the class 'excited'
-            for (let i = 0; i < excitedElements.length; i++) {
-                // Get the first 'img' element inside this 'excited' element
-                let images = excitedElements[i].getElementsByTagName("img");
-
-                // Check if there is at least one 'img' tag and modify its width
-                if (images.length > 0) {
-                    images[0].style.width = "200px";
-                }
-            }
+            // cerate new variable 
+            const line = document.querySelector(".line");
+            line.style.width = "90%";
+            line.style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
         }
     })
-
 }
 
 // game login AND MAIN LOGIC 
@@ -80,17 +72,12 @@ reset.addEventListener('click', () => {
     isgameover = false
     document.getElementsByClassName("info")[0].innerText = "Turn for " + firstText;
 
-    let excitedElements = document.getElementsByClassName("excited");
 
-    // Loop through each element with the class 'excited'
-    for (let i = 0; i < excitedElements.length; i++) {
-        // Get the first 'img' element inside this 'excited' element
-        let images = excitedElements[i].getElementsByTagName("img");
+    let excitedElement = document.getElementsByClassName("excited")[0]; // Access the first element
+    let imgElement = excitedElement.getElementsByTagName("img")[0]; // Access the first image
+    imgElement.style.width = "0px"; // Set the width to 0px
 
-        // Check if there is at least one 'img' tag and modify its width
-        if (images.length > 0) {
-            images[0].style.width = "0px";
-        }
-    }
-
+    // remove win line 
+    const line = document.querySelector(".line");
+    line.style.width = "0%";
 })

@@ -25,9 +25,10 @@ a {
     color: white;
     font-size: 27px;
     font-family: 'Roboto', sans-serif;
-    align-items: center;   
+    align-items: center;
 }
-.container{
+
+.container {
     font-family: 'Roboto', sans-serif;
 
 }
@@ -35,6 +36,7 @@ a {
 .ul-nav {
     margin: 0px;
 }
+
 .line {
     height: 3px;
     width: 0px;
@@ -58,30 +60,56 @@ a {
     font-size: 22px;
     font-family: "Inter", sans-serif;
 }
-.box{
+
+.box {
     border: 2px solid black;
-    height: 20vh ;
+    height: 20vh;
     font-size: 5vw;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-.box:hover{
+
+.box:hover {
     background-color: rgb(222, 200, 243);
 }
+
 .excited img {
-    display: none;
+    width: 0;
+    transition: width 1s ease-in-out;
 }
-.left-side{
+
+.left-side {
     margin-bottom: 60pxpx;
 }
-.right-side{
+
+.right-side {
     margin-bottom: 60pxpx;
 }
-#reset{
+
+#reset {
     transition: 0.3s ease-in-out;
 
 }
-#reset:hover{
+
+#reset:hover {
     background-color: rgb(222, 200, 243);
 
+}
+
+.line {
+    background-color: black;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+  /*   transform: rotate(32deg);
+    top: 202px; 
+    transform: rotate(90deg);*/
+    /* transform: translate(10vw) rotate(90deg); */
+
+ 
+}
+
+.line-div {
+    position: relative;
+    transform: rotate();
 }

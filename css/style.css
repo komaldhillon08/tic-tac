@@ -98,10 +98,13 @@ a {
 
 .line {
     background-color: black;
+    width: 0;
     height: 3px;
-    position: absolute;
-                /* Initial width */
+    position: absolute;          
     transition: width 1s ease-in-out;
+    /* translate(-3.2vw, 9.4vw) rotate(90deg) */
+
+
 
 }
 

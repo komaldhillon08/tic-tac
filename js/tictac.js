@@ -21,7 +21,7 @@ const checkwin = () => {
         [0, 1, 2, 1, 3.3, 0],
         [3, 4, 5, 1, 10.1, 0],
         [6, 7, 8, 1, 17, 0],
-        [0, 3, 6, -11.7, 11, 90],
+        [0, 3, 6, -3.2, 9.4, 90],
         [1, 4, 7, -0.6, 11, 90],
         [2, 5, 8, 10.5, 11.1, 90],
         [0, 4, 8, -0.5, 10.3, 32],
@@ -38,7 +38,8 @@ const checkwin = () => {
 
             // cerate new variable 
             const line = document.querySelector(".line");
-            line.style.width = "90%";
+            line.style.width = "16vw";
+            
             line.style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`;
         }
     })
